@@ -100,6 +100,7 @@ scooby_movies %>%
     plot.subtitle = element_text(size = 13, margin = margin(0, 0, 25, 0)),
     plot.caption.position = "plot",
     plot.caption = element_text(margin = margin(25, 0, 0, 0)),
+    plot.background = element_rect(fill = 'white'),
     plot.margin =  margin(30, 30, 15, 30),
     axis.title.x = element_blank(),
     axis.text.y = element_text(
@@ -110,6 +111,7 @@ scooby_movies %>%
     panel.spacing = margin(10, 10, 10, 10)
   )
 
-ggsave('stupid_zombies_graph.png',
+ggsave(paste0('graficos/', lubridate::today(), '_stupid_zombies_graph.png'),
        width = 12,
-       height = 9)
+       height = 9,
+       dpi = 300)
